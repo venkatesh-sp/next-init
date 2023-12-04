@@ -4,13 +4,13 @@ import { useRouter } from 'next/router';
 import cookie from 'js-cookie';
 import AuthService from '@/services/AuthService';
 
-
 const authservice = new AuthService();
 
 const withAuth = (WrappedComponent: React.FC) => {
     const AuthWrapper: React.FC = (props) => {
         const router = useRouter();
         const token = cookie.get('accessToken');
+        const [loading, setLoading] = useState(true);
 
         const validateToken = async () => {
             // Replace the following with your actual token validation logic,
@@ -24,16 +24,21 @@ const withAuth = (WrappedComponent: React.FC) => {
                 // Redirect to the login page if the token is not valid or doesn't exist
                 router.push('/login');
             }
+
+            // Set loading to false after token validation
+            setLoading(false);
         };
 
-        React.useEffect(() => {
-            // Call the asynchronous validation function
-            validateToken();
+        useEffect(() => {
+            // Call the asynchronous validation function only on the client side
+            if (typeof window !== 'undefined') {
+                validateToken();
+            }
         }, []);
 
-        // Render nothing while token validation is in progress
-        if (token === undefined) {
-            return null;
+        // If the token doesn't exist, don't render the protected page
+        if (!token || loading) {
+            return <div>Loading...</div>;
         }
 
         // Render the wrapped component if the token is valid
