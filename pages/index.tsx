@@ -1,9 +1,7 @@
-import withAuth from "@/components/hoc/withAuth"
+import withAuth from '@/components/hoc/withAuth';
 
 const Dashboard = () => {
-  return (
-    <div>This is Dashboard with Protection</div>
-  )
-}
+  return <div>This is Dashboard with Protection</div>;
+};
 
-export default withAuth(Dashboard)
+export default withAuth(Dashboard);

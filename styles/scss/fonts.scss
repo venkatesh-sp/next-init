@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Segoe UI Regular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Regular'),
+    url('/fonts/segoe-ui/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI Italic';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Italic'),
+    url('/fonts/segoe-ui/Segoe UI Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Bold'),
+    url('/fonts/segoe-ui/Segoe UI Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Bold Italic'),
+    url('/fonts/segoe-ui/Segoe UI Bold Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Almarai regular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Almarai-Regular'),
+    url('/fonts/Almarai/Almarai-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Almarai Light';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Almarai-Light'),
+    url('/fonts/Almarai/Almarai-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Almarai Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Almarai-Bold'),
+    url('/fonts/Almarai/Almarai-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Almarai Extra Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Almarai-ExtraBold'),
+    url('/fonts/Almarai/Almarai-ExtraBold.ttf') format('truetype');
+}

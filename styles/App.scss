@@ -1,4 +1,23 @@
+// Bootstrap Override
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import './scss/bootstrap.override.scss';
+
+@import './scss/fonts.scss';
+
 html,
-body {
+body,
+#__next {
   margin: 0;
+  height: 100%;
+  font-family: 'Almarai Regular', sans-serif;
+}
+
+/* LoginForm.css */
+
+.login-bg {
+  background-image: url('/assets/LoginSection.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
